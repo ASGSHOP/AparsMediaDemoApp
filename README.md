@@ -1,47 +1,68 @@
-# Teachstack
+**Apars Classroom — TeachStack**
 
-## Integrate Live Class Infrastructure in Minutes
+Apars Classroom (TeachStack demo) is a simple demonstration platform that pairs a React frontend with a TypeScript Express backend to showcase creating and joining live classroom sessions.
 
-Teachmint’s signature product - TeachStack empowers live classroom learning by adding real-time audio/visual communications to your app or website, making your classroom learning into a seamless experience
+**TL;DR**
 
-This repository provides a demonstration application to use teachstack api and create a basic app that connects the backend (server) and the frontend (client or app)
+- **Start frontend:** `cd app && npm install && npm start`
+- **Start backend (dev):** `cd server && npm install && npm run dev`
+- **Or with Docker Compose:** `docker-compose up --build`
 
-## Requirements
+**What this repo contains**
 
-- [git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/)
-- `client_id` and `auth_key` for making any api calls (Please write us at contact@teachmint.com if you are intrested in using our api's)
+- A React app (client) in the `app` folder that provides UI for creating and joining sessions.
+- A TypeScript Express server (API) in the `server` folder that powers session endpoints and utilities.
 
-## Installation
+**Requirements**
 
-- Navigate to the directory where you would like to setup the repository and clone using:
-```http
-git clone https://github.com/Teachmint/demo-app.git
+- Node.js (16+ recommended)
+- npm or yarn
+- (Optional) Docker & Docker Compose
+
+**Quickstart (development)**
+
+- Frontend
+
+  ```bash
+  cd app
+  npm install
+  npm start
+  ```
+
+- Backend (development)
+
+  ```bash
+  cd server
+  npm install
+  npm run dev
+  ```
+
+**Run both with Docker**
+
+```bash
+docker-compose up --build
 ```
-- ### Run Server
-    ```sh
-    cd /server
-    npm install --force
-    PORT=4000 TM_API_URL="https://api.teachmint.com" CLIENT_ID="`your_client_id`"" AUTH_KEY="`your_auth_key`" npm run dev
-    ```
-    (Or create a .env file in server folver with the above parameters and just enter "npm run dev")
 
-    **(Expected result: 🚀 App listening on the port 4000)**
-    
-- ### Run App
-    ```sh
-    cd /app
-    npm install --force
-    npm run start
-    ```
-    **(Expected result: Runs app on localhost:3000)**
-    
-## Documentation
+**Key files & entry points**
 
-To know more about our api endpoints, please have a look at our documentation:
+- Frontend entry: [app/src/App.js](app/src/App.js#L1-L60)
+- Frontend metadata: [app/package.json](app/package.json#L1-L200) and [app/README.md](app/README.md)
+- Backend entry: [server/src/server.ts](server/src/server.ts#L1-L20)
+- Backend app: [server/src/app.ts](server/src/app.ts#L1-L200)
+- Backend metadata: [server/package.json](server/package.json#L1-L200)
+- Compose setup: [docker-compose.yml](docker-compose.yml)
 
-**[CLICK HERE TO SEE TEACHSTACK DOCUMENTATION](https://docs.teachmint.com/)**
+**Notes**
 
-## License
+- The frontend uses React Router with pages in `app/src/pages` for session flows (create/join).
+- The backend is TypeScript-based; use `npm run build` in `server` for a production build and then `npm start` to run the compiled output.
 
-MIT
+**Documentation & API**
+
+- TeachStack API docs (external): https://media.aparsclassroom.com/admin/docs
+
+**License**
+
+- MIT — see LICENSE
+
+If you'd like, I can expand the README with API examples, environment variable references, or a CONTRIBUTING guide.
