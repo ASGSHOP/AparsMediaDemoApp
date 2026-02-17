@@ -1,6 +1,6 @@
-**Apars Classroom — TeachStack**
+**Apars Classroom — Media Engine**
 
-Apars Classroom (TeachStack demo) is a simple demonstration platform that pairs a React frontend with a TypeScript Express backend to showcase creating and joining live classroom sessions.
+Apars Classroom Media Engine (Demo) is a simple demonstration platform that pairs a React frontend with a TypeScript Express backend to showcase creating and joining live classroom sessions and other features.
 
 **TL;DR**
 
@@ -59,10 +59,8 @@ docker-compose up --build
 
 **Documentation & API**
 
-- TeachStack API docs (external): https://media.aparsclassroom.com/admin/docs
+- Media API docs (external): https://media.aparsclassroom.com/admin/api-guide
 
 **License**
 
 - MIT — see LICENSE
-
-If you'd like, I can expand the README with API examples, environment variable references, or a CONTRIBUTING guide.
